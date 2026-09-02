@@ -25,7 +25,7 @@ const ASSESSMENT_COUNT = 3;
  *
  * Change this later if you want a longer or shorter activity.
  */
-const MAX_QUESTIONS_PER_ACTIVITY = 8;
+const MAX_QUESTIONS_PER_ACTIVITY = 10;
 
 
 /* =========================================================
