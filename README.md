@@ -1,6 +1,35 @@
 # boundary-scenarios
 View the activity at https://equbed.github.io/boundary-scenarios/
 
+# how it works
+The first three questions are always shown in order. Then it looks for things such as:
+
+Did the learner communicate a closed boundary?
+Did they communicate an open boundary?
+Did they use unclear communication?
+Did they use verbal communication?
+Did they make a safe choice?
+
+The program then chooses an unanswered question that
+provides additional practice.
+
+To increase the initial number of questions, look in the javascript and find:
+
+const ASSESSMENT_COUNT = 3;
+
+# Changing activity length
+Changing Activity Length
+
+The current activity allows up to 8 questions.
+
+This setting is in:
+
+script.js
+
+Find:
+
+const MAX_QUESTIONS_PER_ACTIVITY = 8;
+
 # Add new questions
 To add a new question, open:
 
@@ -182,3 +211,64 @@ If you want a new paragraph, use:
 feedback:
     "First paragraph.\n\n" +
     "Second paragraph."
+
+## Complete example new question
+{
+    id: 7,
+
+    skillsPracticed: [
+        "closed",
+        "clear",
+        "verbal"
+    ],
+
+    question:
+        "A friend asks to borrow something that belongs to you. You do not want to lend it to them.",
+
+    answers: [
+
+        {
+            text: "“No, I don't want to lend it out.”",
+
+            score: 2,
+
+            skills: [
+                "closed",
+                "clear",
+                "verbal"
+            ],
+
+            feedback:
+                "Great job! You clearly communicated a closed boundary."
+        },
+
+        {
+            text: "“Maybe another time.”",
+
+            score: 1,
+
+            skills: [
+                "partial",
+                "verbal"
+            ],
+
+            feedback:
+                "You communicated that you do not want to share right now, but your answer may make the other person think they can ask again later."
+        },
+
+        {
+            text: "“Sure, you can borrow it.”",
+
+            score: 0,
+
+            skills: [
+                "open",
+                "verbal"
+            ],
+
+            feedback:
+                "You communicated an open boundary. Remember that it is okay to say no when you do not want to lend something."
+        }
+
+    ]
+},
