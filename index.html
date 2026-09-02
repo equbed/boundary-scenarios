@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Communicating Your Boundaries</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,72 +14,137 @@
 
     <main class="activity-container">
 
-        <!-- Header -->
+        <!-- ================================
+             HEADER
+             ================================= -->
+
         <header class="activity-header">
+
             <h1>Communicating Your Boundaries</h1>
+
             <p class="subtitle">
                 Let's practice communicating what we want and need.
             </p>
+
         </header>
 
-        <!-- Progress -->
+
+        <!-- ================================
+             PROGRESS
+             ================================= -->
+
         <div class="progress-area">
-            <span id="progress-text">Question 1</span>
+
+            <span id="progress-text">
+                Question 1
+            </span>
 
             <div class="progress-bar">
+
                 <div id="progress-fill"></div>
+
             </div>
+
         </div>
 
-        <!-- Question -->
+
+        <!-- ================================
+             QUESTION SCREEN
+             ================================= -->
+
         <section id="question-screen" class="screen">
 
             <div class="scenario-box">
+
                 <p id="question-text"></p>
+
             </div>
 
-            <h2>What would you do?</h2>
+            <h2>
+                What would you do?
+            </h2>
 
-            <div id="answer-buttons" class="answer-buttons">
-                <!-- Answer buttons are created by JavaScript -->
+            <div
+                id="answer-buttons"
+                class="answer-buttons">
             </div>
 
         </section>
 
-        <!-- Feedback -->
-        <section id="feedback-screen" class="screen hidden">
 
-            <div id="feedback-box" class="feedback-box">
-                <h2 id="feedback-heading">Feedback</h2>
+        <!-- ================================
+             FEEDBACK SCREEN
+             ================================= -->
+
+        <section
+            id="feedback-screen"
+            class="screen hidden">
+
+            <div class="feedback-box">
+
+                <h2 id="feedback-heading">
+                    Feedback
+                </h2>
+
                 <p id="feedback-text"></p>
+
             </div>
 
-            <button id="continue-button" class="primary-button">
+            <button
+                id="continue-button"
+                class="primary-button">
+
                 Continue
+
             </button>
 
         </section>
 
-        <!-- Results / End -->
-        <section id="end-screen" class="screen hidden">
+
+        <!-- ================================
+             END SCREEN
+             ================================= -->
+
+        <section
+            id="end-screen"
+            class="screen hidden">
 
             <div class="end-box">
-                <h2>Great work!</h2>
+
+                <h2>
+                    Great work!
+                </h2>
 
                 <p id="end-message">
-                    You practiced several ways to communicate your boundaries.
+                    You practiced several ways to
+                    communicate your boundaries.
                 </p>
 
-                <button id="restart-button" class="primary-button">
+                <button
+                    id="restart-button"
+                    class="primary-button">
+
                     Start Again
+
                 </button>
+
             </div>
 
         </section>
 
     </main>
 
+
+    <!--
+        IMPORTANT:
+
+        Questions are loaded first.
+        The activity program is loaded second.
+    -->
+
+    <script src="questions.js"></script>
     <script src="script.js"></script>
 
 </body>
+
 </html>
